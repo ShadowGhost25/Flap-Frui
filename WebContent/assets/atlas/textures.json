@@ -1,0 +1,53 @@
+{
+  "textures": [{
+    "image": "textures.png",
+    "frames": [
+      {
+        "filename": "apple",
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 66,
+          "y": 6,
+          "w": 48,
+          "h": 58
+        },
+        "spriteSourceSize": {
+          "x": 4,
+          "y": 0,
+          "w": 48,
+          "h": 58
+        },
+        "sourceSize": {
+          "w": 57,
+          "h": 60
+        }
+      },
+      {
+        "filename": "korzina",
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 2,
+          "y": 2,
+          "w": 62,
+          "h": 62
+        },
+        "spriteSourceSize": {
+          "x": 9,
+          "y": 6,
+          "w": 62,
+          "h": 62
+        },
+        "sourceSize": {
+          "w": 80,
+          "h": 71
+        }
+      }
+    ]
+  }],
+  "meta": {
+    "app": "Phaser Editor - Atlas Generator",
+    "version": "2"
+  }
+}
