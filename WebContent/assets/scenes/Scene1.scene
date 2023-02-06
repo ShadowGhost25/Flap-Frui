@@ -7,24 +7,79 @@
     "-type": "DisplayList",
     "children": [
       {
-        "-id": "f5840504-3517-4373-9e4b-3e3e72fa2c71",
+        "-id": "a374873d-0bce-4b40-9012-a892b7fb9ee3",
+        "-type": "Image",
+        "children": [],
+        "variableName": "ground",
+        "variableField": true,
+        "x": 501.3146667480469,
+        "y": 437.11810302734375,
+        "textureKey": "textures",
+        "textureFrame": "ground"
+      },
+      {
+        "-id": "6f97f5ac-8046-453f-afb5-f99586026a39",
         "-type": "Image",
         "children": [],
         "variableName": "korzina",
         "variableField": true,
-        "x": 443.2711181640625,
-        "y": 509.1597900390625,
+        "x": 469.92742919921875,
+        "y": 331.7626647949219,
         "textureKey": "textures",
         "textureFrame": "korzina"
       },
       {
-        "-id": "53d89400-4193-41d8-a7cc-a47b26c61e33",
+        "-id": "d6dc3fe5-f396-4388-9885-de9f25b102a8",
+        "-type": "Image",
+        "children": [],
+        "variableName": "watermelon",
+        "variableField": true,
+        "x": 478,
+        "y": 154,
+        "textureKey": "textures",
+        "textureFrame": "watermelon"
+      },
+      {
+        "-id": "7d41558e-3337-4856-bd9f-c0f79c75b86e",
+        "-type": "Image",
+        "children": [],
+        "variableName": "cherry",
+        "variableField": true,
+        "x": 557,
+        "y": 206,
+        "textureKey": "textures",
+        "textureFrame": "cherry"
+      },
+      {
+        "-id": "c4325e5c-00f5-405a-9243-c99f70ae4766",
+        "-type": "Image",
+        "children": [],
+        "variableName": "mushroom",
+        "variableField": true,
+        "x": 404,
+        "y": 224,
+        "textureKey": "textures",
+        "textureFrame": "mushroom"
+      },
+      {
+        "-id": "5f1a5cff-4e2e-4369-babf-76cb36ffdc93",
+        "-type": "Image",
+        "children": [],
+        "variableName": "tablet",
+        "variableField": true,
+        "x": 481,
+        "y": 217,
+        "textureKey": "textures",
+        "textureFrame": "tablet"
+      },
+      {
+        "-id": "845290f2-4192-49d4-a24d-f00fea48954f",
         "-type": "Image",
         "children": [],
         "variableName": "apple",
         "variableField": true,
-        "x": 487.079833984375,
-        "y": 152.43612670898438,
+        "x": 468,
+        "y": 271,
         "textureKey": "textures",
         "textureFrame": "apple"
       }
