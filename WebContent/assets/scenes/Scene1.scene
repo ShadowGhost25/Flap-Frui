@@ -25,6 +25,7 @@
         "variableField": true,
         "x": 469.92742919921875,
         "y": 331.7626647949219,
+        "scaleY": 0.9495372176170349,
         "textureKey": "textures",
         "textureFrame": "korzina"
       },
@@ -34,8 +35,8 @@
         "children": [],
         "variableName": "watermelon",
         "variableField": true,
-        "x": 478,
-        "y": 154,
+        "x": 335.0257873535156,
+        "y": -295.92535400390625,
         "textureKey": "textures",
         "textureFrame": "watermelon"
       },
@@ -45,8 +46,8 @@
         "children": [],
         "variableName": "cherry",
         "variableField": true,
-        "x": 557,
-        "y": 206,
+        "x": 681.4656372070312,
+        "y": -179.43035888671875,
         "textureKey": "textures",
         "textureFrame": "cherry"
       },
@@ -56,8 +57,8 @@
         "children": [],
         "variableName": "mushroom",
         "variableField": true,
-        "x": 404,
-        "y": 224,
+        "x": 105.61131286621094,
+        "y": -480.97125244140625,
         "textureKey": "textures",
         "textureFrame": "mushroom"
       },
@@ -67,8 +68,8 @@
         "children": [],
         "variableName": "tablet",
         "variableField": true,
-        "x": 481,
-        "y": 217,
+        "x": 824.1106567382812,
+        "y": -394.8871154785156,
         "textureKey": "textures",
         "textureFrame": "tablet"
       },
@@ -78,8 +79,8 @@
         "children": [],
         "variableName": "apple",
         "variableField": true,
-        "x": 468,
-        "y": 271,
+        "x": 301.67596435546875,
+        "y": -65.25354766845703,
         "textureKey": "textures",
         "textureFrame": "apple"
       }

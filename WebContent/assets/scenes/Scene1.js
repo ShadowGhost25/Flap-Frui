@@ -15,30 +15,39 @@ class Scene1 extends Phaser.Scene {
 		var ground = this.add.image(501.31467, 437.1181, "textures", "ground");
 		
 		var korzina = this.add.image(469.92743, 331.76266, "textures", "korzina");
+		korzina.setScale(1.0, 0.9495372);
 		
-		var watermelon = this.add.image(478.0, 154.0, "textures", "watermelon");
+		var watermelon = this.add.image(335.0258, -295.92535, "textures", "watermelon");
 		
-		var cherry = this.add.image(557.0, 206.0, "textures", "cherry");
+		var cherry = this.add.image(681.46564, -179.43036, "textures", "cherry");
 		
-		var mushroom = this.add.image(404.0, 224.0, "textures", "mushroom");
+		var mushroom = this.add.image(105.61131, -480.97125, "textures", "mushroom");
 		
-		var tablet = this.add.image(481.0, 217.0, "textures", "tablet");
+		var tablet = this.add.image(824.11066, -394.88712, "textures", "tablet");
 		
-		var apple = this.add.image(468.0, 271.0, "textures", "apple");
+		var apple = this.add.image(301.67596, -65.25355, "textures", "apple");
 		
 		this.fGround = ground;
 		this.fKorzina = korzina;
-
 		this.fWatermelon = watermelon;
 		this.fCherry = cherry;
-		this.fApple = apple;
-
-		this.fTablet = tablet;
 		this.fMushroom = mushroom;
+		this.fTablet = tablet;
+		this.fApple = apple;
+		
 	}
 	
+	
+	
+	
+	
+	
+	
+	
 	/* START-USER-CODE */
-
+	// preload (){
+	// 	this.load.image('fon', '../Design/fon.png')
+	// }
 
 	create() {
 		this._create();
@@ -48,11 +57,20 @@ class Scene1 extends Phaser.Scene {
 		
 		this.physics.add.existing(this.fApple);
 		this.physics.add.existing(this.fCherry);
+		this.physics.add.existing(this.fWatermelon);
+		this.physics.add.existing(this.fMushroom);
+		this.physics.add.existing(this.fTablet);
 
 		this.physics.add.overlap(this.fKorzina, this.fApple, this.hitApple, null, this);
 		this.physics.add.overlap(this.fKorzina, this.fCherry, this.hitCherry, null, this);
+		this.physics.add.overlap(this.fKorzina, this.fWatermelon, this.hitWatermelon, null, this);
+		this.physics.add.overlap(this.fKorzina, this.fMushroom, this.hitMushroom, null, this);
+		this.physics.add.overlap(this.fKorzina, this.fTablet, this.hitTablet, null, this);
 
 		this.physics.add.overlap(this.fApple, this.fGround, this.missApple, null, this);
+		this.physics.add.overlap(this.fCherry, this.fGround, this.missCherry, null, this);
+		this.physics.add.overlap(this.fWatermelon, this.fGround, this.missWatermelon, null, this);
+
 		this.physics.add.overlap(this.fCherry, this.fGround, this.missCherry, null, this);
 
 		this.createScore();
@@ -104,6 +122,50 @@ class Scene1 extends Phaser.Scene {
 		})
 	}
 
+	hitWatermelon() {
+		this.fWatermelon.x = Phaser.Math.Between(0, 1000);
+		this.fWatermelon.y = Phaser.Math.Between(-50, -50);
+		
+		this.score += 5;
+
+		this.scoreText.setText("Score: " + this.score);
+		this.tweens.add({
+			targets: this.fKorzina,
+			duration: 150,
+			scaleX: 1.2,
+			scaleY: 1.2,
+			yoyo: true
+		})
+	}
+
+	hitMushroom() {
+		this.fMushroom.x = Phaser.Math.Between(0, 1000);
+		this.fMushroom.y = Phaser.Math.Between(-50, -50);
+		
+		this.life -= 1;
+
+		this.lifeText.setText("Life: " + this.life);
+		this.tweens.add({
+			targets: this.fKorzina,
+		})
+	}
+
+		hitTablet() {
+		this.fTablet.x = Phaser.Math.Between(0, 1000);
+		this.fTablet.y = Phaser.Math.Between(-50, -50);
+		
+		if(this. life < 3){
+			this.life += 1;
+		}
+		
+
+		this.lifeText.setText("Life: " + this.life);
+		this.tweens.add({
+			targets: this.fKorzina,
+		})
+	}
+
+
 	missApple() {
 		
 		this.fApple.x = Phaser.Math.Between(0, 1000);
@@ -127,6 +189,17 @@ class Scene1 extends Phaser.Scene {
 		})
 	}
 
+	missWatermelon() {
+		this.fWatermelon.x = Phaser.Math.Between(0, 1000);
+		this.fWatermelon.y = Phaser.Math.Between(-50, -50);
+		this.life -= 1;
+
+		this.lifeText.setText("Life: " + this.life);
+		this.tweens.add({
+			targets: this.fWatermelon,
+		})
+	}
+
 	update() {
 		// if(this.score === 0) {
 		// 	this.fApple.y += 0.5
@@ -136,15 +209,15 @@ class Scene1 extends Phaser.Scene {
 		// if(this.fApple.y === 450){
 		// 	this.score -1;
 		// }
-		this.fApple.y += 4;
+		this.fApple.y += 2.5;
 		this.fCherry.y += 2;
-		this.fMushroom.y +=7;
-		this.fWatermelon.y +=3;
-		this.fTablet.y += 9;
+		this.fMushroom.y += 1.5;
+		this.fWatermelon.y +=4;
+		this.fTablet.y += 4;
 		if (this.cursors.right.isDown) {
-			this.fKorzina.x += 7;
+			this.fKorzina.x += 9;
 		} else if (this.cursors.left.isDown) {
-			this.fKorzina.x -= 7;
+			this.fKorzina.x -= 9;
 		}
 		if (this.fKorzina.x < 0) {
 			this.fKorzina.x += 1000;
