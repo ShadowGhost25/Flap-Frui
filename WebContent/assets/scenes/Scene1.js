@@ -14,9 +14,6 @@ class Scene1 extends Phaser.Scene {
 	
 		var ground = this.add.image(501.31467, 437.1181, "textures", "ground");
 		
-		var korzina = this.add.image(469.92743, 331.76266, "textures", "korzina");
-		korzina.setScale(1.0, 0.9495372);
-		
 		var watermelon = this.add.image(335.0258, -295.92535, "textures", "watermelon");
 		
 		var cherry = this.add.image(681.46564, -179.43036, "textures", "cherry");
@@ -27,13 +24,18 @@ class Scene1 extends Phaser.Scene {
 		
 		var apple = this.add.image(301.67596, -65.25355, "textures", "apple");
 		
+		var korzina = this.add.image(488.97006, 374.4733, "textures", "korzina");
+		
+		var heart = this.add.image(930.73, 33.28709, "textures", "heart");
+		heart.setScale(0.4417385, 0.35871232);
+		
 		this.fGround = ground;
-		this.fKorzina = korzina;
 		this.fWatermelon = watermelon;
 		this.fCherry = cherry;
 		this.fMushroom = mushroom;
 		this.fTablet = tablet;
 		this.fApple = apple;
+		this.fKorzina = korzina;
 		
 	}
 	
@@ -80,14 +82,14 @@ class Scene1 extends Phaser.Scene {
 	createScore() {
 		this.score = 0;
 
-		var style = { font: "15px Lucida Sans", fill: "#fff" };
+		var style = { font: "20px ", fill: "#fff" };
 		this.scoreText = this.add.text(20, 20, "Score: " + this.score, style);
 	}
 	createLife() {
 		this.life = 3;
 
-		var styleLife = { font: "15px Lucida Sans", fill: "#fff" };
-		this.lifeText = this.add.text(930, 20, "Life: " + this.life, styleLife);
+		var styleLife = { font: "20px", fill: "#fff" };
+		this.lifeText = this.add.text(955, 20, ":" + this.life, styleLife);
 	}
 
 	hitApple() {
@@ -126,7 +128,7 @@ class Scene1 extends Phaser.Scene {
 		this.fWatermelon.x = Phaser.Math.Between(0, 1000);
 		this.fWatermelon.y = Phaser.Math.Between(-50, -50);
 		
-		this.score += 5;
+		this.score += 3;
 
 		this.scoreText.setText("Score: " + this.score);
 		this.tweens.add({
@@ -144,7 +146,7 @@ class Scene1 extends Phaser.Scene {
 		
 		this.life -= 1;
 
-		this.lifeText.setText("Life: " + this.life);
+		this.lifeText.setText(":" + this.life);
 		this.tweens.add({
 			targets: this.fKorzina,
 		})
@@ -159,10 +161,12 @@ class Scene1 extends Phaser.Scene {
 		}
 		
 
-		this.lifeText.setText("Life: " + this.life);
+		this.lifeText.setText(":" + this.life);
 		this.tweens.add({
 			targets: this.fKorzina,
 		})
+
+		
 	}
 
 
@@ -172,7 +176,7 @@ class Scene1 extends Phaser.Scene {
 		this.fApple.y = Phaser.Math.Between(-50, -50);
 		this.life -= 1;
 
-		this.lifeText.setText("Life: " + this.life);
+		this.lifeText.setText(":" + this.life);
 		this.tweens.add({
 			targets: this.fApple,
 		})
@@ -183,7 +187,7 @@ class Scene1 extends Phaser.Scene {
 		this.fCherry	.y = Phaser.Math.Between(-50, -50);
 		this.life -= 1;
 
-		this.lifeText.setText("Life: " + this.life);
+		this.lifeText.setText(":" + this.life);
 		this.tweens.add({
 			targets: this.fCherry,
 		})
@@ -194,7 +198,7 @@ class Scene1 extends Phaser.Scene {
 		this.fWatermelon.y = Phaser.Math.Between(-50, -50);
 		this.life -= 1;
 
-		this.lifeText.setText("Life: " + this.life);
+		this.lifeText.setText(":" + this.life);
 		this.tweens.add({
 			targets: this.fWatermelon,
 		})
@@ -209,20 +213,23 @@ class Scene1 extends Phaser.Scene {
 		// if(this.fApple.y === 450){
 		// 	this.score -1;
 		// }
-		this.fApple.y += 2.5;
-		this.fCherry.y += 2;
+		this.fApple.y += 3;
+		this.fCherry.y += 2.4;
 		this.fMushroom.y += 1.5;
 		this.fWatermelon.y +=4;
-		this.fTablet.y += 4;
+		this.fTablet.y += 2;
 		if (this.cursors.right.isDown) {
-			this.fKorzina.x += 9;
+			this.fKorzina.x += 12;
 		} else if (this.cursors.left.isDown) {
-			this.fKorzina.x -= 9;
+			this.fKorzina.x -= 12;
 		}
 		if (this.fKorzina.x < 0) {
 			this.fKorzina.x += 1000;
 		} else if (this.fKorzina.x > 1000) {
 			this.fKorzina.x = 0;
+		}
+		if(this.fTablet.y > 1500){
+			this.fTablet.y = -394.88712;
 		}
 	}
 

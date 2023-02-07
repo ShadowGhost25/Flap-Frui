@@ -3,12 +3,12 @@
   "files": [
     "Design/ground.jpg",
     "Design/apple.png",
-    "Design/korzina.png",
     "Design/watermelon.png",
     "Design/cherry.png",
     "Design/mushroom.png",
     "Design/tablet.png",
-    "Design/fon.jpg"
+    "Design/korzina.png",
+    "Design/heart.png"
   ],
   "settings": {
     "pot": false,
@@ -53,8 +53,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 2,
+        "x": 161,
+        "y": 237,
         "w": 46,
         "h": 46
       },
@@ -75,8 +75,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 59,
-        "y": 59,
+        "x": 2,
+        "y": 2,
         "w": 46,
         "h": 46
       },
@@ -98,7 +98,7 @@
       "rotated": false,
       "frame": {
         "x": 2,
-        "y": 180,
+        "y": 285,
         "w": 1010,
         "h": 38
       },
@@ -120,19 +120,41 @@
       "rotated": false,
       "frame": {
         "x": 2,
-        "y": 107,
-        "w": 114,
-        "h": 71
+        "y": 190,
+        "w": 100,
+        "h": 93
       },
       "spriteSourceSize": {
-        "x": 34,
-        "y": 105,
-        "w": 114,
-        "h": 71
+        "x": 0,
+        "y": 3,
+        "w": 100,
+        "h": 93
       },
       "sourceSize": {
-        "w": 180,
-        "h": 180
+        "w": 100,
+        "h": 100
+      },
+      "name": "heart",
+      "regionIndex": -1
+    },
+    {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 2,
+        "y": 98,
+        "w": 96,
+        "h": 90
+      },
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 7,
+        "w": 96,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 100
       },
       "name": "korzina",
       "regionIndex": -1
@@ -141,8 +163,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 118,
-        "y": 132,
+        "x": 2,
+        "y": 50,
         "w": 51,
         "h": 46
       },
@@ -163,8 +185,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 171,
-        "y": 132,
+        "x": 55,
+        "y": 50,
         "w": 41,
         "h": 46
       },
@@ -185,8 +207,8 @@
       "trimmed": true,
       "rotated": false,
       "frame": {
-        "x": 2,
-        "y": 50,
+        "x": 104,
+        "y": 228,
         "w": 55,
         "h": 55
       },
