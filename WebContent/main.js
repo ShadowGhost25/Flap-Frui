@@ -1,10 +1,9 @@
-
 window.addEventListener('load', function() {
 
 	var game = new Phaser.Game({
     "title": "Flap Fruit",
-    "width": 1000,
-    "height": 450,
+    "width": 1920,
+    "height": 880,
     "type": Phaser.AUTO,
     "backgroundColor": "#88F",
     "parent": "game-container",

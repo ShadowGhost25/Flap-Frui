@@ -1,0 +1,59 @@
+body {
+	background-color: #c8c8ff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.menu {
+	width: 300px;
+	height: 500px;
+	text-align: center;
+	font-family: 'Lucida Sans',
+		'Lucida Sans Regular',
+		'Lucida Grande',
+		'Lucida Sans Unicode',
+		Geneva,
+		Verdana,
+		sans-serif;
+	;
+	background-color: bisque;
+	border-radius: 10px;
+	font-size: 20px;
+	border: 2px solid black;
+}
+
+input {
+	font-size: 20px;
+	font-family: 'Lucida Sans',
+		'Lucida Sans Regular',
+		'Lucida Grande',
+		'Lucida Sans Unicode',
+		Geneva,
+		Verdana,
+		sans-serif;
+	;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+button {
+	font-family: 'Lucida Sans',
+		'Lucida Sans Regular',
+		'Lucida Grande',
+		'Lucida Sans Unicode',
+		Geneva,
+		Verdana,
+		sans-serif;
+	;
+	margin-top: 40px;
+	font-size: 20px;
+	background-color: #c8c8ff;
+	border-radius: 10px;
+	padding: 2px 4px;
+}
+
+h1 {
+	margin-top: 0px;
+}

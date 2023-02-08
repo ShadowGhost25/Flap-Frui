@@ -12,22 +12,30 @@ class Scene1 extends Phaser.Scene {
 	
 	_create() {
 	
-		var ground = this.add.image(501.31467, 437.1181, "textures", "ground");
+		var ground = this.add.image(1104.4503, 867.45154, "textures", "ground");
+		ground.setOrigin(0.5720697, 0.5);
+		ground.setScale(1.984614, 2.02962);
 		
-		var watermelon = this.add.image(335.0258, -295.92535, "textures", "watermelon");
+		var watermelon = this.add.image(777.5087, -386.03564, "textures", "watermelon");
+		watermelon.setScale(1.6604077, 1.4176551);
 		
-		var cherry = this.add.image(681.46564, -179.43036, "textures", "cherry");
+		var cherry = this.add.image(1417.2, -223.18826, "textures", "cherry");
+		cherry.setScale(1.353198, 1.6326509);
 		
-		var mushroom = this.add.image(105.61131, -480.97125, "textures", "mushroom");
+		var mushroom = this.add.image(302.4404, -643.43335, "textures", "mushroom");
+		mushroom.setScale(1.8797132, 1.723319);
 		
-		var tablet = this.add.image(824.11066, -394.88712, "textures", "tablet");
+		var tablet = this.add.image(1227.2368, -575.21643, "textures", "tablet");
+		tablet.setScale(1.8398038, 1.4887581);
 		
-		var apple = this.add.image(301.67596, -65.25355, "textures", "apple");
+		var apple = this.add.image(345.4157, -101.43261, "textures", "apple");
+		apple.setScale(1.798879, 1.9055235);
 		
-		var korzina = this.add.image(488.97006, 374.4733, "textures", "korzina");
+		var korzina = this.add.image(991.4038, 753.8722, "textures", "korzina");
+		korzina.setScale(2.0239558, 1.9726975);
 		
-		var heart = this.add.image(930.73, 33.28709, "textures", "heart");
-		heart.setScale(0.4417385, 0.35871232);
+		var heart = this.add.image(1650.8624, 93.558365, "textures", "heart");
+		heart.setScale(1.0460824, 1.009834);
 		
 		this.fGround = ground;
 		this.fWatermelon = watermelon;
@@ -39,17 +47,7 @@ class Scene1 extends Phaser.Scene {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 	/* START-USER-CODE */
-	// preload (){
-	// 	this.load.image('fon', '../Design/fon.png')
-	// }
 
 	create() {
 		this._create();
@@ -77,6 +75,12 @@ class Scene1 extends Phaser.Scene {
 
 		this.createScore();
 		this.createLife();
+		
+	}
+	gameOver() {
+		var styleGameOver ={ font: "20px", fill: "#fff"};
+		
+	
 	}
 
 	createScore() {
@@ -89,7 +93,7 @@ class Scene1 extends Phaser.Scene {
 		this.life = 3;
 
 		var styleLife = { font: "20px", fill: "#fff" };
-		this.lifeText = this.add.text(955, 20, ":" + this.life, styleLife);
+		this.lifeText = this.add.text(940, 20, ":" + this.life, styleLife);
 	}
 
 	hitApple() {
@@ -106,6 +110,7 @@ class Scene1 extends Phaser.Scene {
 			scaleY: 1.2,
 			yoyo: true
 		})
+		this.sprite.body.moves = false;
 	}
 
 	hitCherry() {
