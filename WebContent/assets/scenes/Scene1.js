@@ -75,25 +75,19 @@ class Scene1 extends Phaser.Scene {
 
 		this.createScore();
 		this.createLife();
-		
-	}
-	gameOver() {
-		var styleGameOver ={ font: "20px", fill: "#fff"};
-		
-	
 	}
 
 	createScore() {
 		this.score = 0;
 
-		var style = { font: "20px ", fill: "#fff" };
-		this.scoreText = this.add.text(20, 20, "Score: " + this.score, style);
+		var style = { font: "50px ", fill: "#fff" };
+		this.scoreText = this.add.text(10, 20, "Score: " + this.score, style);
 	}
 	createLife() {
 		this.life = 3;
 
-		var styleLife = { font: "20px", fill: "#fff" };
-		this.lifeText = this.add.text(940, 20, ":" + this.life, styleLife);
+		var styleLife = { font: "50px", fill: "#fff" };
+		this.lifeText = this.add.text(1800, 20, ":" + this.life, styleLife);
 	}
 
 	hitApple() {
@@ -110,7 +104,7 @@ class Scene1 extends Phaser.Scene {
 			scaleY: 1.2,
 			yoyo: true
 		})
-		this.sprite.body.moves = false;
+
 	}
 
 	hitCherry() {
@@ -208,8 +202,8 @@ class Scene1 extends Phaser.Scene {
 			targets: this.fWatermelon,
 		})
 	}
-
 	update() {
+
 		// if(this.score === 0) {
 		// 	this.fApple.y += 0.5
 		// }else {
