@@ -108,21 +108,17 @@ class Scene1 extends Phaser.Scene {
 
 	stopGame() {
 		this.input.keyboard.on('keydown-ESC', function () {
-			console.log('vi', this);
-			if (this.fApple.y < 1500) {
-				var style = { font: "50px ", fill: "#fff" };
-				this.pauseText = this.add.text(800, 400, "PAUSE ", style);
-			} else {
-				this.pauseText.setText(".");
-			}
 
+
+
+			console.log('vi', this.pauseText);
 
 			if (this.fGame.pause) {
 				this.fGame.pause = false;
-
+				this.pauseText.setVisible(false);
 			}
 			else {
-
+				this.pauseText.setVisible(true);
 				this.fGame.pause = true;
 			}
 		}, this);
@@ -133,6 +129,10 @@ class Scene1 extends Phaser.Scene {
 
 		var style = { font: "50px ", fill: "#fff" };
 		this.scoreText = this.add.text(10, 20, "Score: " + this.score, style);
+
+		var style = { font: "200px ", fill: "#fff" };
+		this.pauseText = this.add.text(650, 350, "PAUSE ", style);
+		this.pauseText.setVisible(false);
 	}
 	createLife() {
 		this.life = 3;
