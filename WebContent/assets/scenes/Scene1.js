@@ -34,7 +34,7 @@ class Scene1 extends Phaser.Scene {
 		var korzina = this.add.image(991.4038, 753.8722, "textures", "korzina");
 		korzina.setScale(2.0239558, 1.9726975);
 		
-		var heart = this.add.image(1650.8624, 93.558365, "textures", "heart");
+		var heart = this.add.image(1750.8624, 50.558365, "textures", "heart");
 		heart.setScale(1.0460824, 1.009834);
 		
 		this.fGround = ground;
@@ -223,8 +223,8 @@ class Scene1 extends Phaser.Scene {
 			this.fKorzina.x -= 12;
 		}
 		if (this.fKorzina.x < 0) {
-			this.fKorzina.x += 1000;
-		} else if (this.fKorzina.x > 1000) {
+			this.fKorzina.x += 1920;
+		} else if (this.fKorzina.x > 1920) {
 			this.fKorzina.x = 0;
 		}
 		if(this.fTablet.y > 1500){

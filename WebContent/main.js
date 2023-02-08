@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
     "backgroundColor": "#88F",
     "parent": "game-container",
     "render": {"pixelArt": true},
-	 "physics": {default: "arcade",arcade: {debug: true}},
+	 "physics": {default: "arcade"},
     "scale": {
         "mode": Phaser.Scale.FIT,
         "autoCenter": Phaser.Scale.CENTER_BOTH
