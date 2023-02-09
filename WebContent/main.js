@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
     "backgroundColor": "#88F",
     "parent": "game-container",
     "render": {"pixelArt": true},
-	 "physics": {default: "arcade"},
+	 "physics": {default: "arcade", arcade : {debug: true},},
     "scale": {
         "mode": Phaser.Scale.FIT,
         "autoCenter": Phaser.Scale.CENTER_BOTH
@@ -22,6 +22,7 @@ class Boot extends Phaser.Scene {
 
 	preload() {
 		this.load.pack("pack", "assets/pack.json");
+        this.load.audio("audio_beam", ["assets/sounds/pix.ogg"])
 	}
 
 	create() {

@@ -8,8 +8,10 @@
     "Design/mushroom.png",
     "Design/tablet.png",
     "Design/korzina.png",
-    "Design/heart.png",
-    "Design/fon.jpg"
+    "Design/fon.jpg",
+    "Design/heart1.png",
+    "Design/heart2.png",
+    "Design/heart3.png"
   ],
   "settings": {
     "pot": false,
@@ -157,7 +159,51 @@
         "w": 100,
         "h": 100
       },
-      "name": "heart",
+      "name": "heart1",
+      "regionIndex": -1
+    },
+    {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 754,
+        "y": 463,
+        "w": 100,
+        "h": 93
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 3,
+        "w": 100,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      },
+      "name": "heart2",
+      "regionIndex": -1
+    },
+    {
+      "trimmed": true,
+      "rotated": false,
+      "frame": {
+        "x": 754,
+        "y": 463,
+        "w": 100,
+        "h": 93
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 3,
+        "w": 100,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 100,
+        "h": 100
+      },
+      "name": "heart3",
       "regionIndex": -1
     },
     {

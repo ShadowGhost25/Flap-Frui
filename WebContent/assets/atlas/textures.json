@@ -87,7 +87,49 @@
         }
       },
       {
-        "filename": "heart",
+        "filename": "heart1",
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 754,
+          "y": 463,
+          "w": 100,
+          "h": 93
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 3,
+          "w": 100,
+          "h": 93
+        },
+        "sourceSize": {
+          "w": 100,
+          "h": 100
+        }
+      },
+      {
+        "filename": "heart2",
+        "trimmed": true,
+        "rotated": false,
+        "frame": {
+          "x": 754,
+          "y": 463,
+          "w": 100,
+          "h": 93
+        },
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 3,
+          "w": 100,
+          "h": 93
+        },
+        "sourceSize": {
+          "w": 100,
+          "h": 100
+        }
+      },
+      {
+        "filename": "heart3",
         "trimmed": true,
         "rotated": false,
         "frame": {

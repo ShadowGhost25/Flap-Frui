@@ -12,8 +12,8 @@
         "children": [],
         "variableName": "fon",
         "variableField": false,
-        "x": 970.0974731445312,
-        "y": 512.9616088867188,
+        "x": 1000,
+        "y": 500,
         "scaleX": -2.719203472137451,
         "scaleY": 2.4384286403656006,
         "textureKey": "textures",
@@ -123,6 +123,45 @@
         "scaleY": 1.0098340511322021,
         "textureKey": "textures",
         "textureFrame": "heart"
+      },
+      {
+        "-id": "21208523-bf56-46f1-8598-e21be47070b8",
+        "-type": "Image",
+        "children": [],
+        "variableName": "heart1",
+        "variableField": true,
+        "x": 1700,
+        "y": 100,
+        "scaleX": 0.7839327454566956,
+        "scaleY": 0.7281513214111328,
+        "textureKey": "textures",
+        "textureFrame": "heart1"
+      },
+      {
+        "-id": "5e5c4ce5-8ee8-46fc-b130-e4847f5bc168",
+        "-type": "Image",
+        "children": [],
+        "variableName": "heart2",
+        "variableField": true,
+        "x": 1600,
+        "y": 100,
+        "scaleX": 0.7839327454566956,
+        "scaleY": 0.7281513214111328,
+        "textureKey": "textures",
+        "textureFrame": "heart2"
+      },
+      {
+        "-id": "93183889-442a-4e5c-94e4-bb15aba4d257",
+        "-type": "Image",
+        "children": [],
+        "variableName": "heart3",
+        "variableField": true,
+        "x": 1500,
+        "y": 100,
+        "scaleX": 0.7839327454566956,
+        "scaleY": 0.7281513214111328,
+        "textureKey": "textures",
+        "textureFrame": "heart3"
       }
     ]
   },
@@ -131,6 +170,9 @@
     "-type": "Groups",
     "children": []
   },
+  "snapEnabled": true,
+  "snapWidth": 100,
+  "snapHeight": 100,
   "borderWidth": 1920,
   "borderHeight": 1080,
   "createMethodName": "_create",
