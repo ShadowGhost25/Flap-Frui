@@ -11,7 +11,23 @@
 
 	<script src="lib/phaser.js"></script>
 	<script src="main.js"></script>
+	<script>
+		window.onload = function () {
+				window.setInterval(function () {
+					var date = new Date();
 
+					var hours = date.getHours()
+					var minutes = date.getMinutes()
+					var seconds = date.getSeconds()
+
+					if (hours < 10) hours = "0" + hours;
+					if (minutes < 10) minutes = "0" + minutes;
+					if (seconds < 10) seconds = "0" + seconds;
+					var clock = hours + ":" + minutes + ":" + seconds;
+					document.getElementById("clock").innerHTML = clock
+				}, 1000);
+			}
+	</script>
 	<style>
 		body {
 			background: black;
@@ -23,6 +39,9 @@
 
 <body>
 	<div id="game-container">
+		<div class="clock">
+			10:12:30
+		</div>
 	</div>
 </body>
 </html>
