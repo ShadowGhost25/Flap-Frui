@@ -62,6 +62,16 @@ class Scene1 extends Phaser.Scene {
 
 	}
 
+
+
+
+
+
+
+
+
+
+
 	/* START-USER-CODE */
 
 	create() {
@@ -104,7 +114,7 @@ class Scene1 extends Phaser.Scene {
 		this.createScore();
 		this.createLife();
 		this.stopGame();
-		this.beamSound.play();
+		// this.beamSound.play();
 	}
 
 	stopGame() {
@@ -123,7 +133,6 @@ class Scene1 extends Phaser.Scene {
 
 	createScore() {
 		this.score = 0;
-
 		var style = { font: "50px ", fill: "#fff" };
 		this.scoreText = this.add.text(10, 20, "Score:" + this.score, style);
 
@@ -268,6 +277,9 @@ class Scene1 extends Phaser.Scene {
 		if (this.life === 0) {
 			this.fHeart3.y -= 300;
 		}
+		if (this.life === 0) {
+			this.scene.start('Scene2', { score: this.score });
+		}
 		//Движения
 		if (!this.fGame.pause) {
 			if (this.life >= 1) {
@@ -276,20 +288,13 @@ class Scene1 extends Phaser.Scene {
 				} else if (this.cursors.left.isDown) {
 					this.fKorzina.x -= 14;
 				}
-				this.fApple.y += 3;
-				this.fCherry.y += 2.4;
-				this.fMushroom.y += 20;
+				this.fApple.y += 2.7;
+				this.fCherry.y += 2.1;
+				this.fMushroom.y += 9;
 				this.fWatermelon.y += 3.6;
 				this.fTablet.y += 2;
 			} else if (this.life <= 0 && this.score < 10) {
-				var styleGameOver = { font: "60px ", fill: "#fff" };
-				this.scoreGame = this.add.text(800, 400, "Game over ", styleGameOver);
-				this.scoreGameover = this.add.text(800, 450, "Score: " + this.score, styleGameOver);
-				this.fApple.y += 0;
-				this.fCherry.y += 0;
-				this.fMushroom.y += 0;
-				this.fWatermelon.y += 0;
-				this.fTablet.y += 0;
+				this.scene.start("Scene2");
 				this.beamSound.stop();
 			} else if (this.score > 10 && this.score) {
 				var styleGameOver = { font: "60px ", fill: "#fff" };

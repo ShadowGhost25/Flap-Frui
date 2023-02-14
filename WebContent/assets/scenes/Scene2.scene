@@ -1,0 +1,31 @@
+{
+  "-app": "Scene Editor - Phaser Editor v2.1.8",
+  "-version": 1,
+  "compilerLang": "JAVA_SCRIPT_6",
+  "displayList": {
+    "-id": "afcf9917-c545-4ef3-baff-2807f71f32cd",
+    "-type": "DisplayList",
+    "children": [{
+      "-id": "de67f8bf-282b-4dde-abe9-62a89fbdc330",
+      "-type": "Image",
+      "children": [],
+      "variableName": "fon_1",
+      "variableField": false,
+      "x": 968.5173950195312,
+      "y": 493.0782165527344,
+      "scaleX": 2.7547295093536377,
+      "scaleY": 2.4384286403656006,
+      "textureKey": "textures",
+      "textureFrame": "fon"
+    }]
+  },
+  "groups": {
+    "-id": "2289e24f-a920-4ec8-bc97-ef8a02d593f7",
+    "-type": "Groups",
+    "children": []
+  },
+  "borderWidth": 1920,
+  "borderHeight": 880,
+  "methodContextType": "SCENE",
+  "sceneKey": "Scene2"
+}

@@ -4,7 +4,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: url(/Design/fon.jpg)0 0 / cover no-repeat;
+	background: url(../Design/fon.jpg)0 0 / cover no-repeat;
 }
 
 .menu {
